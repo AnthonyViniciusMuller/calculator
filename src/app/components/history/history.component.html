@@ -1,0 +1,10 @@
+<mat-list>
+  @for (expression of history(); track $index) {
+    <mat-list-item>
+      <button (click)="chosePastExpression.emit(expression)">
+        <span matListItemTitle>{{ expression | result }}</span>
+        <span matListItemLine>{{ expression | arrayToString }}</span>
+      </button>
+    </mat-list-item>
+  }
+</mat-list>

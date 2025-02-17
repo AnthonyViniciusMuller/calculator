@@ -1,0 +1,23 @@
+:host {
+    overflow: scroll;
+    height: 100%;
+    display: block;
+    text-align: end;
+    background-color: var(--mat-sys-surface-container-high);
+    border-radius: 0 0 30px 30px;
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+mat-list {
+    width: min-content;
+    margin-left: auto;
+}
+
+button {
+    cursor: pointer;
+    display: contents;
+}
