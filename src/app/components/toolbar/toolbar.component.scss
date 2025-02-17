@@ -1,0 +1,17 @@
+mat-toolbar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    & :nth-child(1) {
+        display: flex;
+        align-items: center;
+    }
+
+    & :nth-child(2) {
+        margin: auto;
+    }
+
+    & :nth-child(3) {
+        margin-left: auto;
+    }
+}
