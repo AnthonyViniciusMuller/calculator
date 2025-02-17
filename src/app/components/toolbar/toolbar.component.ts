@@ -9,7 +9,25 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   templateUrl: './toolbar.component.html',
   styleUrl: './toolbar.component.scss'
 })
-export class ToolbarComponent {
+export class ToolbarComponent implements OnInit {
   readonly undo = output();
 
+  readonly storageKey = "isDarkMode"
+  readonly isDarkMode = signal<boolean>(JSON.parse(localStorage.getItem(this.storageKey) || "false"));
+
+  ngOnInit() {
+    if (!this.isDarkMode()) {
+      return;
+    }
+
+    this.toggleDarkMode();    
+  }
+
+  toggleDarkMode() {
+    this.isDarkMode.set(document.body.classList.toggle('dark-mode'));
+  }
+
+  readonly saveThemePreferenceToStorage = effect(() => {
+    localStorage.setItem(this.storageKey, JSON.stringify(this.isDarkMode()));
+  });
 }

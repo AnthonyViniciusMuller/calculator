@@ -8,4 +8,11 @@
 
   <h1>Calulator</h1>
 
+  <button mat-icon-button (click)="toggleDarkMode()">
+    @if (isDarkMode()) {
+      <mat-icon fontIcon="light_mode" />  
+    } @else {
+      <mat-icon fontIcon="dark_mode"/>
+    }
+  </button>
 </mat-toolbar>
