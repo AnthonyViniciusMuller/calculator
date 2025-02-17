@@ -10,7 +10,9 @@ export class ExpressionResultPipe implements PipeTransform {
     };
       
     try {
-      return String(new Function(`return ${expression.join("")}`)());
+      const result = new Function(`return ${expression.join("")}`)();
+
+      return result ? String(result) : null;
     } catch (error) {
       return null;
     }
