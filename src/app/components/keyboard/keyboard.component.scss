@@ -1,0 +1,19 @@
+:host {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    grid-template-areas: 
+    "C parenL parenR divide"
+    "seven eight nine multiply"
+    "four five six minus"
+    "one two three plus"
+    "zero decimal percent equals";
+}
+
+button {
+    width: auto;
+}
+
+.numbers {
+    background-color: var(--mat-sys-inverse-primary);
+}

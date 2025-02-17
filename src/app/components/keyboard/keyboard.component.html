@@ -1,0 +1,22 @@
+<button mat-fab [style.grid-area]="'C'" (click)="clear()">C</button>
+<button mat-fab [style.grid-area]="'parenL'" (click)="addToExpression('(')">(</button>
+<button mat-fab [style.grid-area]="'parenR'" (click)="addToExpression(')')">)</button>
+
+<button mat-fab class="numbers" [style.grid-area]="'nine'" (click)="addToExpression('9')">9</button>
+<button mat-fab class="numbers" [style.grid-area]="'eight'" (click)="addToExpression('8')">8</button>
+<button mat-fab class="numbers" [style.grid-area]="'seven'" (click)="addToExpression('7')">7</button>
+<button mat-fab class="numbers" [style.grid-area]="'six'" (click)="addToExpression('6')">6</button>
+<button mat-fab class="numbers" [style.grid-area]="'five'" (click)="addToExpression('5')">5</button>
+<button mat-fab class="numbers" [style.grid-area]="'four'" (click)="addToExpression('4')">4</button>
+<button mat-fab class="numbers" [style.grid-area]="'three'" (click)="addToExpression('3')">3</button>
+<button mat-fab class="numbers" [style.grid-area]="'two'" (click)="addToExpression('2')">2</button>
+<button mat-fab class="numbers" [style.grid-area]="'one'" (click)="addToExpression('1')">1</button>
+<button mat-fab class="numbers" [style.grid-area]="'zero'" (click)="addToExpression('0')">0</button>
+
+<button mat-fab [style.grid-area]="'decimal'" (click)="addToExpression('.')">.</button>
+<button mat-fab [style.grid-area]="'percent'" (click)="addToExpression('%')"><mat-icon fontIcon="percent" /></button>
+<button mat-fab [style.grid-area]="'plus'" (click)="addToExpression('+')"><mat-icon fontIcon="add" /></button>
+<button mat-fab [style.grid-area]="'minus'" (click)="addToExpression('-')"><mat-icon fontIcon="remove" /></button>
+<button mat-fab [style.grid-area]="'multiply'" (click)="addToExpression('*')"><mat-icon fontIcon="*" /></button>
+<button mat-fab [style.grid-area]="'divide'" (click)="addToExpression('/')"><mat-icon fontIcon="÷" /></button>
+<button mat-fab [style.grid-area]="'equals'" (click)="nextExpression()"><mat-icon fontIcon="=" /></button>
