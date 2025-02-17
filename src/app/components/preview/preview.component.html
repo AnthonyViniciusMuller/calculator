@@ -1,0 +1,13 @@
+@let humanRedableExpression = expression() | arrayToString;
+@let expressionResult = expression() | result;
+
+@if (humanRedableExpression) {
+    <p class="expression">{{ humanRedableExpression }}</p>
+    <p class="preview">
+        @if (expressionResult !== humanRedableExpression) {
+            {{ expressionResult }}
+        }
+    </p>
+} @else {
+    <p class="expression">0</p>
+}
